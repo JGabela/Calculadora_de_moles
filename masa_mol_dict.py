@@ -6,6 +6,7 @@ alkali = {
     "Cesio" : 132.91,
     "Rubidio" : 85.47,
     "Francio" : 223.00
+
 }
 
 alkalinos = {
@@ -16,6 +17,7 @@ alkalinos = {
     "Magnesio" : 24.31,
     "Estroncio" : 87.62,
     "Radio" : 226.00
+
 }
 
 transicion = {
@@ -50,16 +52,16 @@ transicion = {
     "Platino" : 195.10,
     "Oro" : 196.97,
     "Mercurio" : 200.59,
-    "Laurencio" : 262,
-    "Rutherfordio" : 261,
-    "Dubnio" : 262,
-    "Seaborgio" : 269,
-    "Bohrio" : 264,
-    "Hassio" : 277,
-    "Meitnerio" : 278,
-    "Darmstadtium" : 281,
-    "Roentgenio" : 272,
-    "Copernico" : 277
+    "Laurencio" : 262.00,
+    "Rutherfordio" : 261.00,
+    "Dubnio" : 262.00,
+    "Seaborgio" : 269.00,
+    "Bohrio" : 264.00,
+    "Hassio" : 277.00,
+    "Meitnerio" : 278.00,
+    "Darmstadtium" : 281.00,
+    "Roentgenio" : 272.00,
+    "Copernico" : 277.00
 
 }
 
@@ -69,96 +71,93 @@ halogenos = {
     "Fluor" : 19.00,
     "Cloro" : 35.45,
     "Yodo" : 126.90,
-    "Astato" : 210,
-    "Teneso" : 294
+    "Astato" : 210.00,
+    "Teneso" : 294.00
 
 }
 
 gases_nobles = {
 
-    "Helio" : 1,
-    "Neon" : 1,
-    "Argon" : 1,
-    "Kripton" : 1,
-    'Xenon' : 1,
-    "Radon" : 1,
-    "Oganeson" : 1
+    "Helio" : 4.00,
+    "Neon" : 20.18,
+    "Argon" : 39.95,
+    "Cripton" : 83.80,
+    'Xenon' : 131.29,
+    "Radon" : 222.00,
+    "Oganesson" : 294.00
 
 }
 
 no_metales = {
-
-    "Hidrogeno" : 1,
-    "Carbono" : 1,
-    "Nitrogeno" : 1,
-    "Oxigeno" : 1,
-    "Fosforo" : 1,
-    "Azufre" : 1,
-    "Selenio" : 1
-
+    "Hidrogeno" : 1.01,
+    "Carbono" : 12.01,
+    "Nitrogeno" : 14.01,
+    "Oxigeno" : 16.00,
+    "Fosforo" : 30.97,
+    "Azufre" : 32.07,
+    "Selenio" : 78.96
 }
 
 otros_metales = {
 
-    "Aluminio" : 1,
-    "Galio" : 1,
-    "Indio" : 1, 
-    "Estaño" : 1,
-    "Talio" : 1,
-    "Plomo" : 1,
-    "Bismuto" : 1,
-    "Nihonio" : 1,
-    "Flerovio" : 1,
-    "Moscovio" : 1,
-    "Livermorio" : 1
-
+    "Aluminio" : 26.98,
+    "Galio" : 69.72,
+    "Indio" : 114.82, 
+    "Estaño" : 118.71,
+    "Talio" : 204.38,
+    "Plomo" : 207.20,
+    "Bismuto" : 208.98,
+    "Nihonio" : 286.00,
+    "Flerovio" : 289.00,
+    "Moscovio" : 288.00,
+    "Livermorio" : 292.00
 
 }
 
 metaloides = {
 
-    "Boro" : 1,
-    "Silicio" : 1,
-    "Germanio" : 1,
-    "Arsenico" : 1, 
-    "Antimonio" : 1,
-    "Teluro" : 1,
-    "Polonio" : 1
+    "Boro" : 10.81,
+    "Silicio" : 28.09, 
+    "Germanio" : 72.64,
+    "Arsenico" : 74.92, 
+    "Antimonio" : 121.76,
+    "Teluro" : 127.60,
+    "Polonio" : 209.00
 
 }
 
 latanidos = {
 
-    "lantano" : 1,
-    "Cerio" : 1,
-    "Prasedomio" : 1,
-    "Prometio" : 1,
-    "Samario" : 1,
-    "Gadolinio" : 1,
-    "Terbio" : 1,
-    "Disprosio" : 1, 
-    "Holmio" : 1,
-    "Erbio" : 1,
-    "Tulio" : 1, 
-    "Iterbio" : 1
+    "lantano" : 138.91,
+    "Cerio" : 140.12,
+    "Praseodimio" : 140.91,
+    "Prometio" : 145.00,
+    "Samario" : 150.36,
+    "Gadolinio" : 157.25,
+    "Terbio" : 158.93,
+    "Disprosio" : 162.50, 
+    "Holmio" : 164.93,
+    "Erbio" : 167.26,
+    "Tulio" : 168.93, 
+    "Iterbio" : 173.04
 
 }
 
 Actinidos = {
 
-    "Actindos" : 1,
-    "Torio" : 1,
-    "Protactnio" : 1,
-    "Uranio" : 1,
-    "Neptunio" : 1,
-    "Plutonio" : 1,
-    "Americo" : 1,
-    "Curio" : 1,
-    "Berquelio" : 1,
-    "Californio" : 1,
-    "Einstenio" : 1,
-    "Fermio" : 1,
-    "Mendelevio" : 1,
-    "Nobelio" : 1
+    "Actinio" : 227.00,
+    "Torio" : 232.04,
+    "Protactinio" : 231.04,
+    "Uranio" : 238.03,
+    "Neptunio" : 237.05,
+    "Plutonio" : 244.00,
+    "Americio" : 243.00,
+    "Curio" : 247.00,
+    "Berkelio" : 247.00,
+    "Californio" : 251.00,
+    "Einstenio" : 252.00,
+    "Fermio" : 257.00,
+    "Mendelevio" : 258.00,
+    "Nobelio" : 259.00
 
 }
