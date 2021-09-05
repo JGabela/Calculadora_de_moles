@@ -1,3 +1,4 @@
+
 alkali = {
 
     "Litio" : 6.94,
@@ -143,7 +144,7 @@ latanidos = {
 
 }
 
-Actinidos = {
+actinidos = {
 
     "Actinio" : 227.00,
     "Torio" : 232.04,
