@@ -1,4 +1,4 @@
-#Version 1.1
+#Version 2.0
 #José Miguel Gabela, 2021
 
 import calculadora
@@ -6,13 +6,13 @@ import masa_mol_dict
 
 print("")
 print("Calculadora de Moles")
-print("Version 1.1")
+print("Version 2.0")
 print("")
 
 print("Ingresa el compuesto o el elemento quimico")
 print('(cada elemento y subindice tiene que ser separado por "#")')
-#trrr = input("")
-trrr = "Na#1"
+trrr = input("")
+#trrr = "Na#1"
 
 print("")
 
@@ -162,6 +162,17 @@ while True:
                         eol = masa_mol_dict.mol * en
                         print(e, ":", eol, "e+23")
                         print('')
+                        print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                        ida = input('')
+                        if ida == "moles":
+                            mas = input("Ingresa la cantidad de gramos que hay: ")
+                            nummol = float(mas) / ven
+                            print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+
+                        if ida == "gramos":
+                            soup = input('Ingresa la cantidad de moles que hay: ')
+                            nugr = ven * float(soup)
+                            print("Hay", nugr, "gramos en", soup, "moles de", trrr)
                         break
 
                     vdn = (va * an) + (vb * bn) + (vc * cn) + (vd * dn)
@@ -183,6 +194,17 @@ while True:
                     dol = masa_mol_dict.mol * dn
                     print(d, ":", dol, "e+23")
                     print('')
+                    print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                    ida = input('')
+                    if ida == "moles":
+                        mas = input("Ingresa la cantidad de gramos que hay: ")
+                        nummol = float(mas) / vdn
+                        print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+
+                    if ida == "gramos":
+                        soup = input('Ingresa la cantidad de moles que hay: ')
+                        nugr = vdn * float(soup)
+                        print("Hay", nugr, "gramos en", soup, "moles de", trrr)
                     break
 
                 vcn = (va * an) + (vb * bn) + (vc * cn)
@@ -200,6 +222,17 @@ while True:
                 col = masa_mol_dict.mol * cn
                 print(c, ":", col, "e+23")
                 print('')
+                print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                ida = input('')
+                if ida == "moles":
+                    mas = input("Ingresa la cantidad de gramos que hay: ")
+                    nummol = float(mas) / vcn
+                    print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+
+                if ida == "gramos":
+                    soup = input('Ingresa la cantidad de moles que hay: ')
+                    nugr = vcn * float(soup)
+                    print("Hay", nugr, "gramos en", soup, "moles de", trrr)
                 break
 
             vbn = (va * an) + (vb * bn)
@@ -213,6 +246,17 @@ while True:
             bol =  masa_mol_dict.mol * bn
             print(b, ":",bol, "e+23")
             print('')
+            print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+            ida = input('')
+            if ida == "moles":
+                mas = input("Ingresa la cantidad de gramos que hay: ")
+                nummol = float(mas) / vbn
+                print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+
+            if ida == "gramos":
+                soup = input('Ingresa la cantidad de moles que hay: ')
+                nugr = vbn * float(soup)
+                print("Hay", nugr, "gramos en", soup, "moles de", trrr)
             break
 
         van = va * an
@@ -225,12 +269,11 @@ while True:
         ida = input('')
         if ida == "moles":
             mas = input("Ingresa la cantidad de gramos que hay: ")
-            nummol = int(mas) / van
+            nummol = float(mas) / van
             print("Hay", nummol, "moles en", mas, "gramos de", trrr)
 
         if ida == "gramos":
             soup = input('Ingresa la cantidad de moles que hay: ')
-            nugr = van * int(soup)
+            nugr = van * float(soup)
             print("Hay", nugr, "gramos en", soup, "moles de", trrr)
-
         break
