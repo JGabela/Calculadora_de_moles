@@ -11,10 +11,11 @@ print("")
 
 print("Ingresa el compuesto o el elemento quimico")
 trrr = input("")
+raw = trrr
 
 print("")
 
-#this block separate the letters of the compund and form the elements
+#this block separate the letters of the list and form the elements of the compund 
 
 trrr = list(trrr)
 
@@ -33,6 +34,24 @@ for a in trrr:
                 trrr.pop(c)
                 trrr.pop(d)
                 trrr.insert(d, p)
+
+
+#This block enables to use sub index bigger than 9
+#
+#for l in trrr:
+#    if type(l) is int:
+#        l = str(l)
+#        k = trrr.index(l)
+#        k = k + 1
+#        if type(k) is int:
+#            j = trrr[k]
+#            j = str(j)
+#            ar = l + j
+#            ar = int(ar)
+#            trrr.pop(l)
+#            trrr.pop(j)
+#            k = k - 1
+#            trrr.insert(k, ar)
 
 #this block determines which element has a subindex of 1 (to be replace)
 
@@ -199,12 +218,12 @@ while True:
                         if ida == "moles":
                             mas = input("Ingresa la cantidad de gramos que hay: ")
                             nummol = float(mas) / ven
-                            print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+                            print("Hay", nummol, "moles en", mas, "gramos de", raw)
 
                         if ida == "gramos":
                             soup = input('Ingresa la cantidad de moles que hay: ')
                             nugr = ven * float(soup)
-                            print("Hay", nugr, "gramos en", soup, "moles de", trrr)
+                            print("Hay", nugr, "gramos en", soup, "moles de", raw)
                         break
 
                     vdn = (va * an) + (vb * bn) + (vc * cn) + (vd * dn)
@@ -236,12 +255,12 @@ while True:
                     if ida == "moles":
                         mas = input("Ingresa la cantidad de gramos que hay: ")
                         nummol = float(mas) / vdn
-                        print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+                        print("Hay", nummol, "moles en", mas, "gramos de", raw)
 
                     if ida == "gramos":
                         soup = input('Ingresa la cantidad de moles que hay: ')
                         nugr = vdn * float(soup)
-                        print("Hay", nugr, "gramos en", soup, "moles de", trrr)
+                        print("Hay", nugr, "gramos en", soup, "moles de", raw)
                     break
 
                 vcn = (va * an) + (vb * bn) + (vc * cn)
@@ -269,12 +288,12 @@ while True:
                 if ida == "moles":
                     mas = input("Ingresa la cantidad de gramos que hay: ")
                     nummol = float(mas) / vcn
-                    print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+                    print("Hay", nummol, "moles en", mas, "gramos de", raw)
 
                 if ida == "gramos":
                     soup = input('Ingresa la cantidad de moles que hay: ')
                     nugr = vcn * float(soup)
-                    print("Hay", nugr, "gramos en", soup, "moles de", trrr)
+                    print("Hay", nugr, "gramos en", soup, "moles de", raw)
                 break
 
             vbn = (va * an) + (vb * bn)
@@ -296,12 +315,12 @@ while True:
             if ida == "moles":
                 mas = input("Ingresa la cantidad de gramos que hay: ")
                 nummol = float(mas) / vbn
-                print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+                print("Hay", nummol, "moles en", mas, "gramos de", raw)
 
             if ida == "gramos":
                 soup = input('Ingresa la cantidad de moles que hay: ')
                 nugr = vbn * float(soup)
-                print("Hay", nugr, "gramos en", soup, "moles de", trrr)
+                print("Hay", nugr, "gramos en", soup, "moles de", raw)
             break
 
         van = va * an
@@ -320,10 +339,10 @@ while True:
         if ida == "moles":
             mas = input("Ingresa la cantidad de gramos que hay: ")
             nummol = float(mas) / van
-            print("Hay", nummol, "moles en", mas, "gramos de", trrr)
+            print("Hay", nummol, "moles en", mas, "gramos de", raw)
 
         if ida == "gramos":
             soup = input('Ingresa la cantidad de moles que hay: ')
             nugr = van * float(soup)
-            print("Hay", nugr, "gramos en", soup, "moles de", trrr)
+            print("Hay", nugr, "gramos en", soup, "moles de", raw)
         break
