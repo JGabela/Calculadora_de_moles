@@ -1,4 +1,4 @@
-#Version 2.0
+#Version 2.22
 #José Miguel Gabela, 2021
 
 import calculadora
@@ -6,20 +6,47 @@ import masa_mol_dict
 
 print("")
 print("Calculadora de Moles")
-print("Version 2.0")
+print("Version 2.22")
 print("")
 
 print("Ingresa el compuesto o el elemento quimico")
-print('(cada elemento y subindice tiene que ser separado por "#")')
 trrr = input("")
-#trrr = "Na#1"
 
 print("")
 
-#this block of code gets the number of elements in the compound
-trrt = trrr.split('#')
-ate = len(trrt)
-ate = ate - 1
+#this block separate the letters of the compund and form the elements
+
+trrr = list(trrr)
+
+for a in trrr:
+    b = a.isupper()
+    if b is False:
+        try:
+            a = int(a)
+        except:
+            if type(a) is str:
+                c = trrr.index(a)
+                d = c - 1
+                a1 = trrr[c]
+                a2 = trrr[d]
+                p = a2 + a1
+                trrr.pop(c)
+                trrr.pop(d)
+                trrr.insert(d, p)
+
+#this block determines which element has a subindex of 1 (to be replace)
+
+ter = len(trrr)
+
+ter = ter - 1
+tir = trrr[ter]
+
+try:
+    trrr[ter] = int(tir)
+except:
+    ter = ter + 1
+    trrr.insert(ter, 1)
+    ter = ter - 1
 
 #this block extracts each element from the compound
 
@@ -28,7 +55,7 @@ n = True
 while n == True:
 
     try:
-        a = trrt[0]
+        a = trrr[0]
     except:
         a = False
         b = False
@@ -38,7 +65,7 @@ while n == True:
         break
 
     try:
-        b = trrt[2]
+        b = trrr[2]
     except:
         b = False
         c = False
@@ -47,7 +74,7 @@ while n == True:
         break
 
     try:
-        c = trrt[4]
+        c = trrr[4]
     except:
         c = False
         d = False
@@ -55,14 +82,14 @@ while n == True:
         break
 
     try:
-        d = trrt[6]
+        d = trrr[6]
     except:
         d = False
         e = False
         break
 
     try:
-        e = trrt[8]
+        e = trrr[8]
     except:
         e = False
         break
@@ -76,7 +103,7 @@ t = True
 while t == True:
 
     try:
-        an = int(trrt[1])
+        an = int(trrr[1])
     except:
         an = False
         bn = False
@@ -86,7 +113,7 @@ while t == True:
         break
 
     try:
-        bn = int(trrt[3])
+        bn = int(trrr[3])
     except:
         bn = False
         cn = False
@@ -95,7 +122,7 @@ while t == True:
         break
 
     try:
-        cn = int(trrt[5])
+        cn = int(trrr[5])
     except:
         cn = False
         dn = False
@@ -103,14 +130,14 @@ while t == True:
         break
 
     try:
-        dn = int(trrt[7])
+        dn = int(trrr[7])
     except:
         dn = False
         en = False
         break
 
     try:
-        en = int(trrt[9])
+        en = int(trrr[9])
     except:
         en = False
         break
@@ -140,30 +167,35 @@ while True:
                         calculadora.n(e)
                         ve = calculadora.n.tr
                         ven = (va * an) + (vb * bn) + (vc * cn) + (vd * dn) + (ve * en)
-                        print('Masa Molar del compuesto', ven, 'g/mol-1')
+                        print('Masa Molar del compuesto', ven, 'g/mol')
                         print('')
-                        print("Cantidad de atomos/molecualas de:", a)
+                        print("Cantidad de atomos de:", a)
                         aol = masa_mol_dict.mol * an
                         print(a, ":", aol, "e+23")
                         print('')
-                        print("Cantidad de atomos/moleculas de:", b)
+                        print("Cantidad de atomos de:", b)
                         bol = masa_mol_dict.mol * bn
                         print(b, ":", bol, "e+23")
                         print('')
-                        print("Cantidad de atomos/moleculas de:", c)
+                        print("Cantidad de atomos de:", c)
                         col = masa_mol_dict.mol * cn
                         print(c, ":", col, "e+23")
                         print('')
-                        print("Cantidad de atomos/moleculas de:", d)
+                        print("Cantidad de atomos de:", d)
                         dol = masa_mol_dict.mol * dn
                         print(d, ":", dol, "e+23")
                         print('')
-                        print("Cantidad de atomos/moleculas de:", e)
+                        print("Cantidad de atomos de:", e)
                         eol = masa_mol_dict.mol * en
                         print(e, ":", eol, "e+23")
                         print('')
-                        print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                        print(
+                            "Quieres la cantidad de moles en cierta cantidad de gramos?",
+                            "O la cantidad de gramos en cierta cantidad de moles?"
+                            )
                         ida = input('')
+                        if ida == 'done':
+                            exit()
                         if ida == "moles":
                             mas = input("Ingresa la cantidad de gramos que hay: ")
                             nummol = float(mas) / ven
@@ -176,26 +208,31 @@ while True:
                         break
 
                     vdn = (va * an) + (vb * bn) + (vc * cn) + (vd * dn)
-                    print('Masa Molar del compuesto', vdn, 'g/mol-1')
+                    print('Masa Molar del compuesto', vdn, 'g/mol')
                     print('')
-                    print("Cantidad de atomos/moleculas de:", a)
+                    print("Cantidad de atomos de:", a)
                     aol = masa_mol_dict.mol * an
                     print(a, ":", aol, "e+23")
                     print('')
-                    print("Cantidad de atomos/moleculas de:", b)
+                    print("Cantidad de atomos de:", b)
                     bol =  masa_mol_dict.mol * bn
                     print(b, ":", bol, "e+23")
                     print('')
-                    print("Cantidad de atomos/moleculas de:", c)
+                    print("Cantidad de atomos de:", c)
                     col = masa_mol_dict.mol * cn
                     print(c, ":", col, "e+23")
                     print('')
-                    print("Cantidad de atomos/moleculas de:", d)
+                    print("Cantidad de atomos de:", d)
                     dol = masa_mol_dict.mol * dn
                     print(d, ":", dol, "e+23")
                     print('')
-                    print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                    print(
+                        "Quieres la cantidad de moles en cierta cantidad de gramos?",
+                        "O la cantidad de gramos en cierta cantidad de moles?"
+                        )
                     ida = input('')
+                    if ida == 'done':
+                        exit()
                     if ida == "moles":
                         mas = input("Ingresa la cantidad de gramos que hay: ")
                         nummol = float(mas) / vdn
@@ -208,22 +245,27 @@ while True:
                     break
 
                 vcn = (va * an) + (vb * bn) + (vc * cn)
-                print('Masa Molar del compuesto', vcn, 'g/mol-1')
+                print('Masa Molar del compuesto', vcn, 'g/mol')
                 print('')
-                print("Cantidad de atomos/moleculas de:", a)
+                print("Cantidad de atomos de:", a)
                 aol = masa_mol_dict.mol * an
                 print(a, ":", aol, "e+23")
                 print('')
-                print("Cantidad de atomos/moleculas de:", b)
+                print("Cantidad de atomos de:", b)
                 bol =  masa_mol_dict.mol * bn
                 print(b, ":", bol, "e+23")
                 print('')
-                print("Cantidad de atomos/moleculas de:", c)
+                print("Cantidad de atomos de:", c)
                 col = masa_mol_dict.mol * cn
                 print(c, ":", col, "e+23")
                 print('')
-                print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+                print(
+                    "Quieres la cantidad de moles en cierta cantidad de gramos?",
+                    "O la cantidad de gramos en cierta cantidad de moles?"
+                    )
                 ida = input('')
+                if ida == 'done':
+                      exit()
                 if ida == "moles":
                     mas = input("Ingresa la cantidad de gramos que hay: ")
                     nummol = float(mas) / vcn
@@ -236,17 +278,20 @@ while True:
                 break
 
             vbn = (va * an) + (vb * bn)
-            print('Masa Molar del compuesto', vbn, 'g/mol-1')
+            print('Masa Molar del compuesto', vbn, 'g/mol')
             print('')
-            print("Cantidad de atomos/moleculas de:", a)
+            print("Cantidad de atomos de:", a)
             aol = masa_mol_dict.mol * an
             print(a, ":", aol, "e+23")
             print('')
-            print("Cantidad de atomos/moleculas de:", b)
+            print("Cantidad de atomos de:", b)
             bol =  masa_mol_dict.mol * bn
             print(b, ":",bol, "e+23")
             print('')
-            print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+            print(
+                "Quieres la cantidad de moles en cierta cantidad de gramos?",
+                "O la cantidad de gramos en cierta cantidad de moles?"
+                )
             ida = input('')
             if ida == "moles":
                 mas = input("Ingresa la cantidad de gramos que hay: ")
@@ -260,13 +305,18 @@ while True:
             break
 
         van = va * an
-        print('Masa Molar del compuesto', van, 'g/mol-1')
+        print('Masa Molar del compuesto', van, 'g/mol')
         print('')
-        print("Cantidad de atomos/moleculas de:", a)
+        print("Cantidad de atomos de:", a)
         print(a, ":", masa_mol_dict.mol * an, "e+23")
         print('')
-        print("Quieres la cantidad de moles en cierta cantidad de gramos, o la cantidad de gramos en cierta cantidad de moles?")
+        print(
+            "Quieres la cantidad de moles en cierta cantidad de gramos?",
+            "O la cantidad de gramos en cierta cantidad de moles?"
+            )
         ida = input('')
+        if ida == 'done':
+            exit()
         if ida == "moles":
             mas = input("Ingresa la cantidad de gramos que hay: ")
             nummol = float(mas) / van
