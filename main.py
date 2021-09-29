@@ -10,30 +10,30 @@ print("Version 2.22")
 print("")
 
 print("Ingresa el compuesto o el elemento quimico")
-trrr = input("")
-raw = trrr
+Compuesto = input("")
+raw = Compuesto
 
 print("")
 
 #this block separate the letters of the list and form the elements of the compund 
 
-trrr = list(trrr)
+Compuesto = list(Compuesto)
 
-for a in trrr:
+for a in Compuesto:
     b = a.isupper()
     if b is False:
         try:
             a = int(a)
         except:
             if type(a) is str:
-                c = trrr.index(a)
+                c = Compuesto.index(a)
                 d = c - 1
-                a1 = trrr[c]
-                a2 = trrr[d]
+                a1 = Compuesto[c]
+                a2 = Compuesto[d]
                 p = a2 + a1
-                trrr.pop(c)
-                trrr.pop(d)
-                trrr.insert(d, p)
+                Compuesto.pop(c)
+                Compuesto.pop(d)
+                Compuesto.insert(d, p)
 
 
 #This block enables to use sub index bigger than 9
@@ -55,17 +55,17 @@ for a in trrr:
 
 #this block determines which element has a subindex of 1 (to be replace)
 
-ter = len(trrr)
+CompuestoLength = len(Compuesto)
 
-ter = ter - 1
-tir = trrr[ter]
+CompuestoLength = CompuestoLength - 1
+tir = Compuesto[CompuestoLength]
 
 try:
-    trrr[ter] = int(tir)
+    Compuesto[CompuestoLength] = int(tir)
 except:
-    ter = ter + 1
-    trrr.insert(ter, 1)
-    ter = ter - 1
+    CompuestoLength = CompuestoLength + 1
+    Compuesto.insert(CompuestoLength, 1)
+    CompuestoLength = CompuestoLength - 1
 
 #this block extracts each element from the compound
 
@@ -74,7 +74,7 @@ n = True
 while n == True:
 
     try:
-        a = trrr[0]
+        a = Compuesto[0]
     except:
         a = False
         b = False
@@ -84,7 +84,7 @@ while n == True:
         break
 
     try:
-        b = trrr[2]
+        b = Compuesto[2]
     except:
         b = False
         c = False
@@ -93,7 +93,7 @@ while n == True:
         break
 
     try:
-        c = trrr[4]
+        c = Compuesto[4]
     except:
         c = False
         d = False
@@ -101,14 +101,14 @@ while n == True:
         break
 
     try:
-        d = trrr[6]
+        d = Compuesto[6]
     except:
         d = False
         e = False
         break
 
     try:
-        e = trrr[8]
+        e = Compuesto[8]
     except:
         e = False
         break
@@ -122,7 +122,7 @@ t = True
 while t == True:
 
     try:
-        an = int(trrr[1])
+        an = int(Compuesto[1])
     except:
         an = False
         bn = False
@@ -132,7 +132,7 @@ while t == True:
         break
 
     try:
-        bn = int(trrr[3])
+        bn = int(Compuesto[3])
     except:
         bn = False
         cn = False
@@ -141,7 +141,7 @@ while t == True:
         break
 
     try:
-        cn = int(trrr[5])
+        cn = int(Compuesto[5])
     except:
         cn = False
         dn = False
@@ -149,14 +149,14 @@ while t == True:
         break
 
     try:
-        dn = int(trrr[7])
+        dn = int(Compuesto[7])
     except:
         dn = False
         en = False
         break
 
     try:
-        en = int(trrr[9])
+        en = int(Compuesto[9])
     except:
         en = False
         break
