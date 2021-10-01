@@ -35,24 +35,6 @@ for a in Compuesto:
                 Compuesto.pop(d)
                 Compuesto.insert(d, p)
 
-
-#This block enables to use sub index bigger than 9
-#
-#for l in trrr:
-#    if type(l) is int:
-#        l = str(l)
-#        k = trrr.index(l)
-#        k = k + 1
-#        if type(k) is int:
-#            j = trrr[k]
-#            j = str(j)
-#            ar = l + j
-#            ar = int(ar)
-#            trrr.pop(l)
-#            trrr.pop(j)
-#            k = k - 1
-#            trrr.insert(k, ar)
-
 #this block determines which element has a subindex of 1 (to be replace)
 
 CompuestoLength = len(Compuesto)
@@ -186,7 +168,7 @@ while True:
                         calculadora.n(e)
                         ve = calculadora.n.tr
                         ven = (va * an) + (vb * bn) + (vc * cn) + (vd * dn) + (ve * en)
-                        print('Masa Molar del compuesto', ven, 'g/mol')
+                        print('Masa Molar de', raw, ':', ven, 'g/mol')
                         print('')
                         print("Cantidad de atomos de:", a)
                         aol = masa_mol_dict.mol * an
@@ -227,7 +209,7 @@ while True:
                         break
 
                     vdn = (va * an) + (vb * bn) + (vc * cn) + (vd * dn)
-                    print('Masa Molar del compuesto', vdn, 'g/mol')
+                    print('Masa Molar de', raw, ':', vdn, 'g/mol')
                     print('')
                     print("Cantidad de atomos de:", a)
                     aol = masa_mol_dict.mol * an
@@ -264,7 +246,7 @@ while True:
                     break
 
                 vcn = (va * an) + (vb * bn) + (vc * cn)
-                print('Masa Molar del compuesto', vcn, 'g/mol')
+                print('Masa Molar de', raw, ':', vcn, 'g/mol')
                 print('')
                 print("Cantidad de atomos de:", a)
                 aol = masa_mol_dict.mol * an
@@ -297,7 +279,7 @@ while True:
                 break
 
             vbn = (va * an) + (vb * bn)
-            print('Masa Molar del compuesto', vbn, 'g/mol')
+            print('Masa Molar de', raw, ':', vbn, 'g/mol')
             print('')
             print("Cantidad de atomos de:", a)
             aol = masa_mol_dict.mol * an
@@ -324,7 +306,7 @@ while True:
             break
 
         van = va * an
-        print('Masa Molar del compuesto', van, 'g/mol')
+        print('Masa Molar de', raw, ':', van, 'g/mol')
         print('')
         print("Cantidad de atomos de:", a)
         print(a, ":", masa_mol_dict.mol * an, "e+23")
