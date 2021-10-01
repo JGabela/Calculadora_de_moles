@@ -1,3 +1,4 @@
+
 import masa_mol_dict
 
 def n(a):
@@ -23,60 +24,3 @@ def n(a):
         n.tr = masa_mol_dict.actinidos[a]
     else:
         n.tr = ""
-
-#def space_count(ele):
-    #count = 0
-    #for sp in ele:
-        #if sp == " ":
-            #count += 1
-    #space_count.spc = count
-#if tea == 2:
-#    van = trrr.split('#')
-#    vam = float(trt[1])
-#    print(va, "u")
-#
-#if tea == 4:
-#    van = va.split('#')
-#    vbn = vb.split('#')
-#    vam = van[1]
-#    vbm = vbn[1]
-#    tear = (va * vam) + (vb * vcm)
-#    print(tear, "u")
-#
-#if tea == 6:
-#    va = va.split('#')
-#    vb = vb.split('#')
-#    vc = vc.split('#')
-#    vam = va[1]
-#    vbm = vb[1]
-#    vcm = vc[1]
-#    tear = (va * vam) + (vb * vbm) + (vc * vcm)
-#    print(tear, "u")
-#
-#if tea == 8:
-#    va = va.split('#')
-#    vb = vb.split('#')
-#    vc = vc.split('#')
-#    vd = vd.split('#')
-#    ve = ve.split('#')
-#    vam = va[1]
-#    vbm = vb[1]
-#    vcm = vc[1]
-#    vdm = vd[1]
-#    tear = (va * vam) + (vb * vbm) + (vc * vcm) + (vd * vdm)
-#    print(tear, "u")
-#
-#if tea == 10:
-#    va = va.split('#')
-#    vb = vb.split('#')
-#    vc = vc.split('#')
-#    vd = vd.split('#')
-#    ve = ve.split('#')
-#    vam = va[1]
-#    vbm = vb[1]
-#    vcm = vc[1]
-#    vdm = vd[1]
-#    vem = ve[1]
-#    tear = (va * vam) + (vb * vbm) + (vc * vcm) + (vd * vdm) + (ve * vem)
-#    print(tear, "u")
-#
