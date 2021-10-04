@@ -49,6 +49,40 @@ except:
     Compuesto.insert(CompuestoLength, 1)
     CompuestoLength = CompuestoLength - 1
 
+#this block of code turns all numbers into integers
+
+for a in Compuesto:
+    try:
+        reemplazo = int(a)
+        indexA = Compuesto.index(a)
+        Compuesto.pop(indexA)
+        Compuesto.insert(indexA, reemplazo)
+    except:
+        continue
+
+#this block enables subindex bigger than 9
+
+for a in Compuesto:
+    if type(a) is int:
+        b = Compuesto.index(a)
+        c = b + 1
+        try:
+            d = Compuesto[c]
+            e = Compuesto.index(d)
+            if type(d) is int:
+                num1 = str(a)
+                num2 = str(d)
+                reemplazo = num1 + num2
+                del Compuesto[e]
+                del Compuesto[b]
+                Compuesto.insert(b, reemplazo)
+            else:
+                continue
+        except:
+            break
+    else:
+        continue
+
 #this block extracts each element from the compound
 
 n = True
