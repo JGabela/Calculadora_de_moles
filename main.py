@@ -179,7 +179,7 @@ while t == True:
 
     t = False
 
-
+x = True
 
 while True:
     if a != False:
@@ -231,12 +231,11 @@ while True:
                         ida = input('')
                         if ida == 'done':
                             exit()
-                        if ida == "moles":
+                        elif ida == "moles":
                             mas = input("Ingresa la cantidad de gramos que hay: ")
                             nummol = float(mas) / ven
                             print("Hay", nummol, "moles en", mas, "gramos de", raw)
-
-                        if ida == "gramos":
+                        elif ida == "gramos":
                             soup = input('Ingresa la cantidad de moles que hay: ')
                             nugr = ven * float(soup)
                             print("Hay", nugr, "gramos en", soup, "moles de", raw)
@@ -268,12 +267,11 @@ while True:
                     ida = input('')
                     if ida == 'done':
                         exit()
-                    if ida == "moles":
+                    elif ida == "moles":
                         mas = input("Ingresa la cantidad de gramos que hay: ")
                         nummol = float(mas) / vdn
                         print("Hay", nummol, "moles en", mas, "gramos de", raw)
-
-                    if ida == "gramos":
+                    elif ida == "gramos":
                         soup = input('Ingresa la cantidad de moles que hay: ')
                         nugr = vdn * float(soup)
                         print("Hay", nugr, "gramos en", soup, "moles de", raw)
@@ -301,12 +299,11 @@ while True:
                 ida = input('')
                 if ida == 'done':
                       exit()
-                if ida == "moles":
+                elif ida == "moles":
                     mas = input("Ingresa la cantidad de gramos que hay: ")
                     nummol = float(mas) / vcn
                     print("Hay", nummol, "moles en", mas, "gramos de", raw)
-
-                if ida == "gramos":
+                elif ida == "gramos":
                     soup = input('Ingresa la cantidad de moles que hay: ')
                     nugr = vcn * float(soup)
                     print("Hay", nugr, "gramos en", soup, "moles de", raw)
@@ -328,12 +325,13 @@ while True:
                 "O la cantidad de gramos en cierta cantidad de moles?"
                 )
             ida = input('')
-            if ida == "moles":
+            if ida == 'done':
+                exit()
+            elif ida == "moles":
                 mas = input("Ingresa la cantidad de gramos que hay: ")
                 nummol = float(mas) / vbn
                 print("Hay", nummol, "moles en", mas, "gramos de", raw)
-
-            if ida == "gramos":
+            elif ida == "gramos":
                 soup = input('Ingresa la cantidad de moles que hay: ')
                 nugr = vbn * float(soup)
                 print("Hay", nugr, "gramos en", soup, "moles de", raw)
@@ -344,20 +342,21 @@ while True:
         print('')
         print("Cantidad de atomos de:", a)
         print(a, ":", masa_mol_dict.mol * an, "e+23")
-        print('')
+        print('')        
         print(
-            "Quieres la cantidad de moles en cierta cantidad de gramos?",
-            "O la cantidad de gramos en cierta cantidad de moles?"
-            )
+        "Quieres la cantidad de moles en cierta cantidad de gramos?",
+        "O la cantidad de gramos en cierta cantidad de moles?"
+        )
         ida = input('')
         if ida == 'done':
             exit()
-        if ida == "moles":
+        elif ida == "moles":
+            x = False
             mas = input("Ingresa la cantidad de gramos que hay: ")
             nummol = float(mas) / van
             print("Hay", nummol, "moles en", mas, "gramos de", raw)
-
-        if ida == "gramos":
+        elif ida == "gramos":
+            x = False
             soup = input('Ingresa la cantidad de moles que hay: ')
             nugr = van * float(soup)
             print("Hay", nugr, "gramos en", soup, "moles de", raw)
