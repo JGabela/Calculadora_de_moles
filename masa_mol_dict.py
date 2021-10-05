@@ -1,5 +1,7 @@
 
-mol = 6.022 #* (10 ** (0 - 23))
+#These are dictionaries with the atomic mass of the elements, two decimals
+
+mol = 6.022 
 
 alkali = {
 
