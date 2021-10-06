@@ -9,7 +9,7 @@ print("Calculadora de Moles")
 print("Version 2.22")
 print("")
 
-print("Ingresa el compuesto o el elemento quimico")
+print("Ingresa el compuesto o el elemento quimico:")
 Compuesto = input("")
 raw = Compuesto
 
