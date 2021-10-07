@@ -3,6 +3,7 @@
 
 import calculadora
 import masa_mol_dict
+from decimal import Decimal
 
 print("")
 print("Calculadora de Moles")
@@ -12,6 +13,9 @@ print("")
 print("Ingresa el compuesto o el elemento quimico:")
 Compuesto = input("")
 raw = Compuesto
+
+if Compuesto == "stop":
+    exit()
 
 print("")
 
@@ -205,24 +209,24 @@ while True:
                         print('Masa Molar de', raw, ':', ven, 'g/mol')
                         print('')
                         print("Cantidad de atomos de:", a)
-                        aol = masa_mol_dict.mol * an
-                        print(a, ":", aol, "e+23")
+                        CantAtom1 = masa_mol_dict.mol * an
+                        print(a, ":", CantAtom1, "e+23")
                         print('')
                         print("Cantidad de atomos de:", b)
-                        bol = masa_mol_dict.mol * bn
-                        print(b, ":", bol, "e+23")
+                        CantAtom2 = masa_mol_dict.mol * bn
+                        print(b, ":", CantAtom2, "e+23")
                         print('')
                         print("Cantidad de atomos de:", c)
-                        col = masa_mol_dict.mol * cn
-                        print(c, ":", col, "e+23")
+                        CantAtom3 = masa_mol_dict.mol * cn
+                        print(c, ":", CantAtom3, "e+23")
                         print('')
                         print("Cantidad de atomos de:", d)
-                        dol = masa_mol_dict.mol * dn
-                        print(d, ":", dol, "e+23")
+                        CantAtom4 = masa_mol_dict.mol * dn
+                        print(d, ":", CantAtom4, "e+23")
                         print('')
                         print("Cantidad de atomos de:", e)
-                        eol = masa_mol_dict.mol * en
-                        print(e, ":", eol, "e+23")
+                        CantAtom5 = masa_mol_dict.mol * en
+                        print(e, ":", CantAtom5, "e+23")
                         print('')
                         print(
                             "Quieres la cantidad de moles en cierta cantidad de gramos?",
@@ -236,29 +240,29 @@ while True:
                             nummol = float(mas) / ven
                             print("Hay", nummol, "moles en", mas, "gramos de", raw)
                         elif ida == "gramos":
-                            soup = input('Ingresa la cantidad de moles que hay: ')
-                            nugr = ven * float(soup)
-                            print("Hay", nugr, "gramos en", soup, "moles de", raw)
+                            CantMol = input('Ingresa la cantidad de moles que hay: ')
+                            numgr = ven * float(CantMol)
+                            print("Hay", numgr, "gramos en", CantMol, "moles de", raw)
                         break
 
                     vdn = (va * an) + (vb * bn) + (vc * cn) + (vd * dn)
                     print('Masa Molar de', raw, ':', vdn, 'g/mol')
                     print('')
                     print("Cantidad de atomos de:", a)
-                    aol = masa_mol_dict.mol * an
-                    print(a, ":", aol, "e+23")
+                    CantAtom1 = masa_mol_dict.mol * an
+                    print(a, ":", CantAtom1, "e+23")
                     print('')
                     print("Cantidad de atomos de:", b)
-                    bol =  masa_mol_dict.mol * bn
-                    print(b, ":", bol, "e+23")
+                    CantAtom2 =  masa_mol_dict.mol * bn
+                    print(b, ":", CantAtom2, "e+23")
                     print('')
                     print("Cantidad de atomos de:", c)
-                    col = masa_mol_dict.mol * cn
-                    print(c, ":", col, "e+23")
+                    CantAtom3 = masa_mol_dict.mol * cn
+                    print(c, ":", CantAtom3, "e+23")
                     print('')
                     print("Cantidad de atomos de:", d)
-                    dol = masa_mol_dict.mol * dn
-                    print(d, ":", dol, "e+23")
+                    CantAtom4 = masa_mol_dict.mol * dn
+                    print(d, ":", CantAtom4, "e+23")
                     print('')
                     print(
                         "Quieres la cantidad de moles en cierta cantidad de gramos?",
@@ -268,29 +272,29 @@ while True:
                     if ida == 'done':
                         exit()
                     elif ida == "moles":
-                        mas = input("Ingresa la cantidad de gramos que hay: ")
-                        nummol = float(mas) / vdn
-                        print("Hay", nummol, "moles en", mas, "gramos de", raw)
+                        mass = input("Ingresa la cantidad de gramos que hay: ")
+                        nummol = float(mass) / vdn
+                        print("Hay", nummol, "moles en", mass, "gramos de", raw)
                     elif ida == "gramos":
-                        soup = input('Ingresa la cantidad de moles que hay: ')
-                        nugr = vdn * float(soup)
-                        print("Hay", nugr, "gramos en", soup, "moles de", raw)
+                        CantMol = input('Ingresa la cantidad de moles que hay: ')
+                        numgr = vdn * float(CantMol)
+                        print("Hay", numgr, "gramos en", CantMol, "moles de", raw)
                     break
 
                 vcn = (va * an) + (vb * bn) + (vc * cn)
                 print('Masa Molar de', raw, ':', vcn, 'g/mol')
                 print('')
                 print("Cantidad de atomos de:", a)
-                aol = masa_mol_dict.mol * an
-                print(a, ":", aol, "e+23")
+                CantAtom1 = masa_mol_dict.mol * an
+                print(a, ":", CantAtom1, "e+23")
                 print('')
                 print("Cantidad de atomos de:", b)
-                bol =  masa_mol_dict.mol * bn
-                print(b, ":", bol, "e+23")
+                CantAtom2 =  masa_mol_dict.mol * bn
+                print(b, ":", CantAtom2, "e+23")
                 print('')
                 print("Cantidad de atomos de:", c)
-                col = masa_mol_dict.mol * cn
-                print(c, ":", col, "e+23")
+                CantAtom3 = masa_mol_dict.mol * cn
+                print(c, ":", CantAtom3, "e+23")
                 print('')
                 print(
                     "Quieres la cantidad de moles en cierta cantidad de gramos?",
@@ -300,25 +304,25 @@ while True:
                 if ida == 'done':
                       exit()
                 elif ida == "moles":
-                    mas = input("Ingresa la cantidad de gramos que hay: ")
-                    nummol = float(mas) / vcn
-                    print("Hay", nummol, "moles en", mas, "gramos de", raw)
+                    mass = input("Ingresa la cantidad de gramos que hay: ")
+                    nummol = float(mass) / vcn
+                    print("Hay", nummol, "moles en", mass, "gramos de", raw)
                 elif ida == "gramos":
-                    soup = input('Ingresa la cantidad de moles que hay: ')
-                    nugr = vcn * float(soup)
-                    print("Hay", nugr, "gramos en", soup, "moles de", raw)
+                    CantMol = input('Ingresa la cantidad de moles que hay: ')
+                    numgr = vcn * float(CantMol)
+                    print("Hay", numgr, "gramos en", CantMol, "moles de", raw)
                 break
 
             vbn = (va * an) + (vb * bn)
             print('Masa Molar de', raw, ':', vbn, 'g/mol')
             print('')
             print("Cantidad de atomos de:", a)
-            aol = masa_mol_dict.mol * an
-            print(a, ":", aol, "e+23")
+            CantAtom1 = masa_mol_dict.mol * an
+            print(a, ":", CantAtom1, "e+23")
             print('')
             print("Cantidad de atomos de:", b)
-            bol =  masa_mol_dict.mol * bn
-            print(b, ":",bol, "e+23")
+            CantAtom2 =  masa_mol_dict.mol * bn
+            print(b, ":",CantAtom2, "e+23")
             print('')
             print(
                 "Quieres la cantidad de moles en cierta cantidad de gramos?",
@@ -328,20 +332,21 @@ while True:
             if ida == 'done':
                 exit()
             elif ida == "moles":
-                mas = input("Ingresa la cantidad de gramos que hay: ")
-                nummol = float(mas) / vbn
-                print("Hay", nummol, "moles en", mas, "gramos de", raw)
+                mass = input("Ingresa la cantidad de gramos que hay: ")
+                nummol = float(mass) / vbn
+                print("Hay", nummol, "moles en", mass, "gramos de", raw)
             elif ida == "gramos":
-                soup = input('Ingresa la cantidad de moles que hay: ')
-                nugr = vbn * float(soup)
-                print("Hay", nugr, "gramos en", soup, "moles de", raw)
+                CantMol = input('Ingresa la cantidad de moles que hay: ')
+                numgr = vbn * float(CantMol)
+                print("Hay", numgr, "gramos en", CantMol, "moles de", raw)
             break
 
         van = va * an
         print('Masa Molar de', raw, ':', van, 'g/mol')
         print('')
         print("Cantidad de atomos de:", a)
-        print(a, ":", masa_mol_dict.mol * an, "e+23")
+        CantAtom1 = masa_mol_dict.mol * an
+        print(a, ":", CantAtom1, "e+23")
         print('')        
         print(
         "Quieres la cantidad de moles en cierta cantidad de gramos?",
@@ -352,12 +357,17 @@ while True:
             exit()
         elif ida == "moles":
             x = False
-            mas = input("Ingresa la cantidad de gramos que hay: ")
-            nummol = float(mas) / van
-            print("Hay", nummol, "moles en", mas, "gramos de", raw)
+            mass = input("Ingresa la cantidad de gramos que hay: ")
+            nummol = float(mass) / van
+            print("Hay", nummol, "moles en", mass, "gramos de", raw)
+            #nummolA = nummol * CantAtom
+            #print('')
+            #print("Cantidad de atomos de", a, ":", nummolA)
+            print("Cantidad de atomos en", nummol, "moles:")
+            print(a, ":", CantAtom1, "e+23")
         elif ida == "gramos":
             x = False
-            soup = input('Ingresa la cantidad de moles que hay: ')
-            nugr = van * float(soup)
-            print("Hay", nugr, "gramos en", soup, "moles de", raw)
+            CantMol = input('Ingresa la cantidad de moles que hay: ')
+            numgr = van * float(CantMol)
+            print("Hay", numgr, "gramos en", CantMol, "moles de", raw)
         break
